@@ -103,7 +103,7 @@ variable "oidc" {
 variable "ip_acl_default_action" {
   description = "(Optional) IP ACL default action. allow, deny"
   type        = string
-  default     = null
+  default     = "deny"
   validation {
     condition     = contains(["allow", "deny"], var.ip_acl_default_action)
     error_message = "ip_acl_default_action must be either allow or deny."
